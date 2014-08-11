@@ -7,8 +7,11 @@ share.
 
 ```
 docker run
-  \ -e "NFS_MOUNT=nas:/mnt/biggins/email-backup/nat"
-  \ -e "DB_DIR=/mnt/biggins/email-backup/nat/gmvault-db"
+  \ -e "NFS_MOUNT=nas:/mnt/storage/email-backup/nat"
+  \ -e "DB_DIR=/mnt/storage/email-backup/nat/gmvault-db"
   \ --privileged
-  \ -i -t narf/gmvault:dev your@example.com
+  \ -i -t narf/gmvault:dev sync your@example.com
 ```
+
+any options passed at the end of the `docker run` command will be passed on to
+gmvault.
