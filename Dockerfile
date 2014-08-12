@@ -1,8 +1,7 @@
-FROM narf/nfsclient:0.0.1
+FROM ubuntu:trusty
 MAINTAINER Nat Lownes <nat.lownes@gmail.com>
 
-# must run in privileged mode (-privileged) when mounting nfs shares
-
+RUN apt-get update --fix-missing
 RUN apt-get install -y python2.7 python-pip python-virtualenv
 RUN apt-get install -y build-essential
 RUN apt-get install -y python2.7-dev
