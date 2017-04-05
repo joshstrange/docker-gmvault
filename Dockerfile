@@ -11,7 +11,6 @@ RUN pip install --allow-all-external -I gmvault==1.9
 ADD gmvault.sh /root/gmvault.sh
 
 RUN chmod +x /root/gmvault.sh
-RUN mkdir /db
 RUN mkdir /backup
 
 ENTRYPOINT ["bash", "/root/gmvault.sh"]
